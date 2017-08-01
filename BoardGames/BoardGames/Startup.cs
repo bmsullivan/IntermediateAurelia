@@ -37,6 +37,9 @@ namespace BoardGames
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseBrowserLink();
+            app.UseStaticFiles();
+
             app.UseMvc();
         }
     }
