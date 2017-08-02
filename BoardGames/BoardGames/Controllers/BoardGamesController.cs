@@ -2,6 +2,7 @@
 using System.Linq;
 using BoardGames.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BoardGames.Controllers
 {
@@ -19,6 +20,20 @@ namespace BoardGames.Controllers
         public IEnumerable<BoardGame> Get()
         {
             return _context.BoardGames.ToList();
+        }
+
+        [HttpGet("{id}")]
+        public BoardGame Get(int id)
+        {
+            return _context.BoardGames.Find(id);
+        }
+
+        [HttpPut]
+        public BoardGame Put([FromBody] BoardGame boardGame)
+        {
+            _context.BoardGames.Attach(boardGame).State = EntityState.Modified;
+            _context.SaveChanges();
+            return boardGame;
         }
     }
 }

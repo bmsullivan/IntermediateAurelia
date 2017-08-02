@@ -136,9 +136,34 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
+          },
+          {
+            "name": "aurelia-fetch-client",
+            "main": "aurelia-fetch-client",
+            "path": "../node_modules/aurelia-fetch-client/dist/amd",
+            "resources": []
+          },
+          "jquery",
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist",
+            "main": "js/bootstrap.min.js",
+            "deps": [
+              "jquery"
+            ],
+            "exports": "$",
+            "resources": [
+              "css/bootstrap.css"
+            ]
           }
         ]
       }
-    ]
+    ],
+    "copyFiles": {
+      "node_modules/font-awesome/css/font-awesome.min.css": "wwwroot/css",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.woff": "wwwroot/fonts",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.woff2": "wwwroot/fonts",
+      "node_modules/font-awesome/fonts/fontawesome-webfont.ttf": "wwwroot/fonts"
+    } 
   }
 }

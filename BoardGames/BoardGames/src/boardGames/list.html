@@ -1,0 +1,10 @@
+﻿<template>
+    <table class="table">
+        <tr><th>Name</th><th>Suggested Players</th><th></th></tr>
+        <tr repeat.for="game of boardGames">
+            <td>${game.name}</td>
+            <td>${game.suggestedPlayers}</td>
+            <td><a route-href="route: edit; params.bind: {id: game.id}"><i class="fa fa-edit"></i></a></td>
+        </tr>
+    </table>
+</template>
