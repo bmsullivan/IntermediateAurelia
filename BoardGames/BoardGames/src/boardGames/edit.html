@@ -1,19 +1,18 @@
 ﻿<template>
-    <div class="container">
-        <form class="form-horizontal" submit.delegate="save()">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-10">
-                    <input type="text" value.bind="name" placeholder="Name" class="form-control"/>
-                </div>
+    <h2>Edit: ${id}</h2>
+    <form class="form-horizontal" submit.delegate="save()">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" value.bind="name" placeholder="Name" class="form-control"/>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Suggested Players</label>
-                <div class="col-sm-10">
-                    <input type="text" value.bind="suggestedPlayers" placeholder="Suggested Players" class="form-control"/>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Suggested Players</label>
+            <div class="col-sm-10">
+                <input type="text" value.bind="suggestedPlayers" placeholder="Suggested Players" class="form-control"/>
             </div>
-            <input type="submit" value="Save"/>
-        </form>
-    </div>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
 </template>
