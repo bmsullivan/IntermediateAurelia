@@ -35,5 +35,13 @@ namespace BoardGames.Controllers
             _context.SaveChanges();
             return boardGame;
         }
+
+        [HttpPost]
+        public BoardGame Post([FromBody] BoardGame boardGame)
+        {
+            _context.BoardGames.Add(boardGame);
+            _context.SaveChanges();
+            return boardGame;
+        }
     }
 }

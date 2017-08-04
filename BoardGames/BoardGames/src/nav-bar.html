@@ -1,0 +1,19 @@
+﻿<template bindable="router">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Board Games</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
+                    <a href.bind="route.href">${route.title}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li if.bind="router.isNavigating">
+                    <i class="fa fa-spinner fa-inverse fa-spin fa-2x"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</template>
