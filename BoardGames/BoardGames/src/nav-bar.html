@@ -1,4 +1,5 @@
 ﻿<template bindable="router">
+    <require from="./locale-picker"></require>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -9,6 +10,9 @@
                     <a href.bind="route.href">${route.title}</a>
                 </li>
             </ul>
+            <form class="navbar-search pull-left">
+                <locale-picker />
+            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li if.bind="router.isNavigating">
                     <i class="fa fa-spinner fa-inverse fa-spin fa-2x"></i>

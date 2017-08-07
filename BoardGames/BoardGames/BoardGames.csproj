@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\locales\en\translation.json" />
+    <Content Include="wwwroot\locales\es\translation.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\Home\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />

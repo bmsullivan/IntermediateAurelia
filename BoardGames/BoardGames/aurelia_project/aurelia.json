@@ -161,6 +161,24 @@
             "main": "aurelia-validation",
             "path": "../node_modules/aurelia-validation/dist/amd",
             "resources": []
+          },
+          {
+            "name": "aurelia-i18n",
+            "main": "aurelia-i18n",
+            "path": "../node_modules/aurelia-i18n/dist/amd",
+            "resources": []
+          },
+          {
+            "name": "i18next",
+            "main": "i18next",
+            "path": "../node_modules/i18next",
+            "resources": []
+          },
+          {
+            "name": "i18next-xhr-backend",
+            "main": "i18nextXHRBackend",
+            "path": "../node_modules/i18next-xhr-backend/dist/umd",
+            "resources": []
           }
         ]
       }

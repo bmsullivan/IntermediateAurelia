@@ -1,0 +1,5 @@
+﻿<template>
+    <select class="navbar-btn form-control" value.bind="selectedLocale">
+        <option repeat.for="locale of locales" value.bind="locale">${locale}</option>
+    </select>
+</template>
