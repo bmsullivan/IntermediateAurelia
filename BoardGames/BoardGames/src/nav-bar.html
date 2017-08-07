@@ -7,7 +7,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li repeat.for="route of router.navigation" class="${route.isActive ? 'active' : ''}">
-                    <a href.bind="route.href">${route.title}</a>
+                    <a href.bind="route.href">${route.title & t}</a>
                 </li>
             </ul>
             <form class="navbar-search pull-left">
