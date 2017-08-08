@@ -9,6 +9,7 @@ export function configure(aurelia) {
     aurelia.use
         .standardConfiguration()
         .plugin('aurelia-validation')
+        .plugin('aurelia-animator-css')
         .plugin('aurelia-i18n', (i18n) => {
             i18n.i18next.use(Backend);
 

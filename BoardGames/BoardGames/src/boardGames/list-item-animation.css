@@ -1,0 +1,8 @@
+﻿tr.au-leave-active {
+    animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

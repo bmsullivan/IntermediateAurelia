@@ -179,6 +179,12 @@
             "main": "i18nextXHRBackend",
             "path": "../node_modules/i18next-xhr-backend/dist/umd",
             "resources": []
+          },
+          {
+            "name": "aurelia-animator-css",
+            "main": "aurelia-animator-css",
+            "path": "../node_modules/aurelia-animator-css/dist/amd",
+            "resources": []
           }
         ]
       }

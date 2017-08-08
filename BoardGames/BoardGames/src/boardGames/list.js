@@ -13,4 +13,9 @@ export class List {
             .then(x => x.json())
             .then(x => this.boardGames = x);
     }
+
+    remove(boardGame) {
+        var index = this.boardGames.indexOf(boardGame);
+        this.boardGames.splice(index, 1);
+    }
 }

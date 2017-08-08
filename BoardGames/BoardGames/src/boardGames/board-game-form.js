@@ -1,9 +1,10 @@
 ﻿import {HttpClient, json} from "aurelia-fetch-client";
-import {inject, NewInstance, bindable} from "aurelia-framework";
+import {inject, NewInstance, bindable, DOM} from "aurelia-framework";
 import {Router} from "aurelia-router";
 import {ValidationRules, ValidationController} from 'aurelia-validation';
+import {Animator} from 'aurelia-templating';
 
-@inject(HttpClient, Router, NewInstance.of(ValidationController))
+@inject(HttpClient, Router, NewInstance.of(ValidationController), DOM.Element, Animator)
 export class BoardGameForm {
     
     @bindable
@@ -13,7 +14,7 @@ export class BoardGameForm {
 
     suggestedPlayers = 0;
 
-    constructor(httpClient, router, validationController) {
+    constructor(httpClient, router, validationController, element, animator) {
         httpClient.configure(x => {
             x.useStandardConfiguration()
                 .withBaseUrl("/api/");
@@ -21,6 +22,8 @@ export class BoardGameForm {
         this.http = httpClient;
         this.router = router;
         this.validationController = validationController;
+        this.element = element;
+        this.animator = animator;
 
         ValidationRules
             .ensure(m => m.name)
@@ -59,6 +62,9 @@ export class BoardGameForm {
                                 suggestedPlayers: this.suggestedPlayers
                             })
                         }).then(() => this.router.navigateToRoute("list"));
+                } else {
+                    let errors = this.element.querySelectorAll('.validation-message');
+                    this.animator.animate(Array.from(errors), 'blink');
                 }
             });
     }

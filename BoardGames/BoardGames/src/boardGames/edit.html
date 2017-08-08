@@ -1,9 +1,11 @@
 ﻿<template>
-    <h2>Edit: ${id}</h2>
-    <require from="./board-game-form"></require>
-    <board-game-form id.bind="id">
-        <template replace-part="submit-button">
-            <input type="submit" value="Save ${name}"/>
-        </template>
-    </board-game-form>
+    <section class="au-animate">
+        <h2>Edit: ${id}</h2>
+        <require from="./board-game-form"></require>
+        <board-game-form id.bind="id">
+            <template replace-part="submit-button">
+                <input type="submit" value="Save ${name}" />
+            </template>
+        </board-game-form>
+    </section>
 </template>

@@ -1,0 +1,21 @@
+﻿section {
+    position: relative;
+}
+
+section.au-enter-active {
+    animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+    0% { left: -2000px; }
+    100% { left: 0; }
+}
+
+section.au-leave-active {
+    animation: slideOut 1s;
+}
+
+@keyframes slideOut {
+    0% { left: 0; }
+    100% { left: -2000px; }
+}

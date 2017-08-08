@@ -1,13 +1,17 @@
 ﻿<template>
-    <table class="table">
-        <tr><th>Name</th><th>Suggested Players</th><th></th></tr>
-        <tr repeat.for="game of boardGames">
-            <td>${game.name}</td>
-            <td>${game.suggestedPlayers}</td>
-            <td><a route-href="route: edit; params.bind: {id: game.id}"><i class="fa fa-edit"></i></a></td>
-        </tr>
-    </table>
-    <div>
-        <a route-href="route: add" class="btn btn-primary">Add New</a>
-    </div>
+    <require from="./list-item-animation.css"></require>
+    <section class="au-animate">
+        <table class="table">
+            <tr><th>Name</th><th>Suggested Players</th><th></th><th></th></tr>
+            <tr repeat.for="game of boardGames" class="au-animate">
+                <td>${game.name}</td>
+                <td>${game.suggestedPlayers}</td>
+                <td><a route-href="route: edit; params.bind: {id: game.id}"><i class="fa fa-edit"></i></a></td>
+                <td><a href="#"><i class="fa fa-times" click.delegate="remove(game)"></i></a></td>
+            </tr>
+        </table>
+        <div>
+            <a route-href="route: add" class="btn btn-primary">Add New</a>
+        </div>
+    </section>
 </template>
